@@ -1,0 +1,41 @@
+#app-footer {
+  padding: 80px 0 30px;
+  background: $light;
+
+  .site-nav {
+
+    &-list {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.footer-contacts {
+  margin-bottom: 25px;
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-item {
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+.footer-copyright {
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,0 +1,11 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: .5s;
+  z-index: 5;
+}

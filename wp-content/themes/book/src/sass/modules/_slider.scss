@@ -1,0 +1,26 @@
+.slider-arrow {
+  display: flex;
+
+  &--reviews {
+    margin-top: 50px;
+  }
+
+  &-item {
+    transform: scale(1);
+    margin-right: 20px;
+    transition: .5s;
+    cursor: pointer;
+
+    &--next {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      fill: $dark;
+    }
+  }
+}

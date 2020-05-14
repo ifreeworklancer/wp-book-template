@@ -1,0 +1,71 @@
+#project {
+  padding: 80px 0 0;
+
+  .decor-bg {
+    @extend %img;
+    width: 100%;
+    padding-bottom: 31.25%;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      padding-bottom: 25.25%;
+    }
+  }
+}
+
+.project-item {
+
+  &-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-col {
+      margin-bottom: 20px;
+      padding-right: 20px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        flex: 1;
+        max-width: 50%;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.book-decor-title {
+  font-size: 3rem;
+  color: $gray-200;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    font-size: 4rem;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    font-size: 6rem;
+  }
+}
+
+.book-image {
+  text-align: center;
+  margin-bottom: 25px;
+
+  img {
+    max-width: 100%;
+  }
+}

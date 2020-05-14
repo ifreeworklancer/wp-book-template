@@ -1,0 +1,37 @@
+$primary: #0c65e5;
+$dark: #0a0a0a;
+$light: #eee;
+$darken: #25282e;
+
+$gray-200: #d1d1d1;
+
+$body-color: $dark;
+$body-bg: #fefefe;
+
+$font-size-base: 1rem;
+$font-family-base: 'PT Sans Caption', sans-serif;
+$headings-font-family: 'PT Sans Caption', sans-serif;
+$font-weight-base: normal;
+$headings-font-weight: bold;
+
+$link-color: $primary;
+$link-hover-decoration: none;
+
+$input-btn-border-width: 0;
+$input-btn-focus-width: 0;
+$input-btn-focus-color: rgba(#fff, 0);
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$input-btn-font-family: $font-family-base;
+
+$btn-border-width: 2px;
+$border-radius: 0;
+
+$btn-padding-x: 30px;
+$btn-padding-y: 20px;
+
+$h1-font-size: $font-size-base * 2.25;
+$h2-font-size: $font-size-base * 2.25;
+$h3-font-size: $font-size-base * 1.875;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base * 1.125;
