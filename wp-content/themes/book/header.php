@@ -40,11 +40,6 @@
                                 <?= get_field('section_subtitle', 68) ?>
                             </a>
                         </li>
-                        <li>
-                            <a href="#project" class="anchor-link">
-                                <?= get_field('book_name', 13) ?>
-                            </a>
-                        </li>
                     </ul>
                 </nav>
                 <a href="#" class="btn btn-outline-primary open-order d-none d-lg-inline-flex">
@@ -75,11 +70,6 @@
                     <li>
                         <a href="#reviews" class="anchor-link">
                             <?= get_field('section_subtitle', 68) ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project" class="anchor-link">
-                            <?= get_field('book_name', 13) ?>
                         </a>
                     </li>
                 </ul>

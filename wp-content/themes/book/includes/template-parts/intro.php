@@ -17,7 +17,7 @@ $book = [
 <section id="intro">
     <div class="container h-100">
         <div class="row justify-content-center h-100">
-            <div class="col-sm-6 col-xl-5 h-100 d-flex align-items-center">
+            <div class="col-sm-10 col-md-8 col-xl-5 h-100 d-flex align-items-center">
                 <div class="intro-item reveal-left">
                     <h1 class="section-title">
                         <?= $book['title']; ?>
@@ -26,36 +26,23 @@ $book = [
                         <div class="book-item__name">
                             <?= $book['author']; ?>
                         </div>
-                        <div class="book-item-reviews">
-                            <div class="book-item-reviews__stars">
-                                <svg width="20" height="20">
-                                    <use xlink:href="#star-icon"></use>
-                                </svg>
-                                <svg width="20" height="20">
-                                    <use xlink:href="#star-icon"></use>
-                                </svg>
-                                <svg width="20" height="20">
-                                    <use xlink:href="#star-icon"></use>
-                                </svg>
-                                <svg width="20" height="20">
-                                    <use xlink:href="#star-icon"></use>
-                                </svg>
-                                <svg width="20" height="20">
-                                    <use xlink:href="#star-icon"></use>
-                                </svg>
-                            </div>
-                            <div class="book-item-reviews__count">
-                                <?= $book['count_reviews']; ?>
-                            </div>
-                        </div>
                         <div class="book-item__text">
                             <p>
                                 <?= $book['description']; ?>
                             </p>
                         </div>
-                        <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-xl-start align-items-center">
-                            <div class="product-price mr-sm-5 mb-4 mb-sm-0">
-                                <?= $book['price']; ?>
+                        <div class="d-flex flex-column align-items-center align-items-xl-start">
+                            <div class="product-price d-flex justify-content-center justify-content-lg-start mb-4">
+                                <?php foreach ($book['price'] as $item) : ?>
+                                    <div class="product-price-item">
+                                        <div class="product-price-item__type">
+                                            <?= $item['book_price_type']; ?>
+                                        </div>
+                                        <div class="product-price-item__value">
+                                            <?= $item['book_price_value']; ?>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                             <a href="#" class="btn btn-outline-primary open-order">
                                 Замовити
@@ -66,18 +53,24 @@ $book = [
             </div>
             <div class="col-sm-9 col-xl-7 h-100 d-flex align-items-end">
                 <div id="intro-images" class="intro-images reveal-right">
-                    <div class="intro-images-item" data-depth="-0.15" data-friction-x="0.15" data-friction-y="0.15"
-                         data-origin-x="1" data-origin-y="1" data-limit-y="10">
-                        <img src="<?= $intro_image_bg['url']; ?>" alt="intro image">
-                    </div>
-                    <div class="intro-images-item" data-depth="0" data-friction-x="0" data-friction-y="0"
-                         data-origin-x="1" data-origin-y="1">
-                        <img src="<?= $intro_image_left['url']; ?>" alt="intro image">
-                    </div>
-                    <div class="intro-images-item" data-depth="0.15" data-friction-x="0.15" data-friction-y="0.15"
-                         data-origin-x="1" data-origin-y="1" data-limit-y="10">
-                        <img src="<?= $intro_image_right['url']; ?>" alt="intro image">
-                    </div>
+                    <?php if ($intro_image_bg != '') : ?>
+                        <div class="intro-images-item" data-depth="-0.15" data-friction-x="0.15" data-friction-y="0.15"
+                             data-origin-x="1" data-origin-y="1" data-limit-y="10">
+                            <img src="<?= $intro_image_bg['url']; ?>" alt="intro image">
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($intro_image_left != '') : ?>
+                        <div class="intro-images-item" data-depth="0" data-friction-x="0" data-friction-y="0"
+                             data-origin-x="1" data-origin-y="1">
+                            <img src="<?= $intro_image_left['url']; ?>" alt="intro image">
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($intro_image_right != '') : ?>
+                        <div class="intro-images-item" data-depth="0.15" data-friction-x="0.15" data-friction-y="0.15"
+                             data-origin-x="1" data-origin-y="1" data-limit-y="10">
+                            <img src="<?= $intro_image_right['url']; ?>" alt="intro image">
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

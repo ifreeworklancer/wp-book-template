@@ -63,4 +63,16 @@ form {
     background: transparent;
     border: none;
   }
+
+  &--selected {
+
+    label {
+      top: 15%;
+    }
+  }
+}
+
+.custom-select {
+  height: auto !important;
+  padding: 15px 0 5px;
 }

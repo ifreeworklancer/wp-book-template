@@ -61,18 +61,6 @@ $project = [
     </div>
 </footer>
 
-<div class="sidebar-left d-none d-lg-block">
-    <div class="sidebar-left-wrapper">
-        <a href="#project" class="anchor-link">
-            <?php $count = 0;
-            foreach ($project['logo'] as $item) : $count++; ?>
-                <?= $item['project_logo_name']; ?>
-                <?php if ($count !== count($project['logo'])) echo ' + '; ?>
-            <?php endforeach; ?>
-        </a>
-    </div>
-</div>
-
 <!-- Script -->
 <?php wp_footer(); ?>
 </body>

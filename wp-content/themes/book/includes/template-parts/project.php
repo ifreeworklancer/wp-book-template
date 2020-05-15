@@ -21,37 +21,37 @@ $book = [
 <!-- Project -->
 <section id="project">
     <div class="container">
-        <div class="row justify-content-around align-items-center mb-5">
-            <div class="col-sm-8 col-lg-5 mb-4">
-                <div class="project-item reveal-left">
-                    <div class="section-subtitle">
-                        <?= $project['subtitle']; ?>
-                    </div>
-                    <h2 class="section-title mb-4">
-                        <?= get_the_title($page_id); ?>
-                    </h2>
-                    <div class="project-item__description">
-                        <?= $project['first_description']; ?>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8 col-lg-5">
-                <div class="project-item reveal-right">
-                    <div class="project-item-image">
-                        <?php foreach ($project['logo'] as $item) : ?>
-                            <div class="project-item-image-col">
-                                <img src="<?= $item['project_logo_image']['url']; ?>" alt="project logo">
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                    <div class="project-item__description">
-                        <?= $project['second_description']; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        <div class="row justify-content-around align-items-center mb-5">-->
+<!--            <div class="col-sm-8 col-lg-5 mb-4">-->
+<!--                <div class="project-item reveal-left">-->
+<!--                    <div class="section-subtitle">-->
+<!--                        --><?//= $project['subtitle']; ?>
+<!--                    </div>-->
+<!--                    <h2 class="section-title mb-4">-->
+<!--                        --><?//= get_the_title($page_id); ?>
+<!--                    </h2>-->
+<!--                    <div class="project-item__description">-->
+<!--                        --><?//= $project['first_description']; ?>
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-sm-8 col-lg-5">-->
+<!--                <div class="project-item reveal-right">-->
+<!--                    <div class="project-item-image">-->
+<!--                        --><?php //foreach ($project['logo'] as $item) : ?>
+<!--                            <div class="project-item-image-col">-->
+<!--                                <img src="--><?//= $item['project_logo_image']['url']; ?><!--" alt="project logo">-->
+<!--                            </div>-->
+<!--                        --><?php //endforeach; ?>
+<!--                    </div>-->
+<!--                    <div class="project-item__description">-->
+<!--                        --><?//= $project['second_description']; ?>
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="row justify-content-center">
-            <div class="col-sm-8 col-lg-6 text-center reveal-bottom">
+            <div class="col-sm-10 col-md-8 col-lg-6 text-center reveal-bottom">
                 <div class="book-decor-title">
                     <?= $book['name']; ?>
                 </div>
@@ -62,36 +62,23 @@ $book = [
                     <div class="book-item__name">
                         <?= $book['author']; ?>
                     </div>
-                    <div class="book-item-reviews justify-content-center">
-                        <div class="book-item-reviews__stars">
-                            <svg width="20" height="20">
-                                <use xlink:href="#star-icon"></use>
-                            </svg>
-                            <svg width="20" height="20">
-                                <use xlink:href="#star-icon"></use>
-                            </svg>
-                            <svg width="20" height="20">
-                                <use xlink:href="#star-icon"></use>
-                            </svg>
-                            <svg width="20" height="20">
-                                <use xlink:href="#star-icon"></use>
-                            </svg>
-                            <svg width="20" height="20">
-                                <use xlink:href="#star-icon"></use>
-                            </svg>
-                        </div>
-                        <div class="book-item-reviews__count">
-                            <?= $book['count_reviews']; ?>
-                        </div>
-                    </div>
                     <div class="book-item__text">
                         <p>
                             <?= $book['description']; ?>
                         </p>
                     </div>
-                    <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center">
-                        <div class="product-price mr-sm-5 mb-4 mb-sm-0">
-                            <?= $book['price']; ?>
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="product-price d-flex justify-content-center justify-content-lg-start mb-4">
+                            <?php foreach ($book['price'] as $item) : ?>
+                                <div class="product-price-item">
+                                    <div class="product-price-item__type">
+                                        <?= $item['book_price_type']; ?>
+                                    </div>
+                                    <div class="product-price-item__value">
+                                        <?= $item['book_price_value']; ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                         <a href="#" class="btn btn-outline-primary open-order">
                             Замовити
